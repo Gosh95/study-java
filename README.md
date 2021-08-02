@@ -1,2 +1,2 @@
 # java-study
- study back-end with java
+study java for back-end
