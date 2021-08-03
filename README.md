@@ -1,2 +1,2 @@
 # java-study
-study java for back-end
+study java & spring-boot for back-end
