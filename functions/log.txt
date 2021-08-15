@@ -1,0 +1,28 @@
+8월 15, 2021 2:51:49 오전 ch09.MyLogger warning
+WARNING: name must not be null
+8월 15, 2021 2:51:49 오전 ch09.MyLogger warning
+WARNING: name is too long
+8월 15, 2021 2:52:33 오전 ch09.MyLogger warning
+WARNING: name must not be null
+8월 15, 2021 2:52:33 오전 ch09.MyLogger warning
+WARNING: name is too long
+8월 15, 2021 2:52:33 오전 ch09.MyLogger log
+INFO: complete
+8월 15, 2021 2:52:33 오전 ch09.MyLogger log
+WARNING: complete
+8월 15, 2021 2:52:33 오전 ch09.MyLogger log
+SEVERE: complete
+8월 15, 2021 2:55:06 오전 ch09.MyLogger warning
+WARNING: name must not be null
+8월 15, 2021 2:55:06 오전 ch09.MyLogger warning
+WARNING: name is too long
+8월 15, 2021 2:55:06 오전 ch09.MyLogger log
+INFO: complete
+8월 15, 2021 2:55:06 오전 ch09.MyLogger log
+WARNING: complete
+8월 15, 2021 2:55:06 오전 ch09.MyLogger log
+SEVERE: complete
+8월 15, 2021 2:55:56 오전 ch09.MyLogger warning
+WARNING: name must not be null
+8월 15, 2021 2:55:56 오전 ch09.MyLogger warning
+WARNING: name is too long
