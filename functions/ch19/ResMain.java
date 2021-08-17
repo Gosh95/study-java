@@ -21,6 +21,7 @@ class Restaurant {
 		while(tableList.size() == 0) {
 			System.out.println(t.getName() + " waiting...");
 			wait();
+			//wait 상태가 된 thread는 notify가 호출 될 때까지 기다린다.
 			System.out.println(t.getName() + " welcome");
 		}
 		
