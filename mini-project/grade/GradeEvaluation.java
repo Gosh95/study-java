@@ -1,5 +1,5 @@
 package grade;
 
 public interface GradeEvaluation {
-	public String evaluateGrade(int score);
+    public String evaluateGrade(int score);
 }
