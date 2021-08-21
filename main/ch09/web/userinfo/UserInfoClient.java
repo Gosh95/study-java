@@ -13,30 +13,30 @@ import ch09.domain.userinfo.dao.oracle.UserInfoOracleDao;
 
 public class UserInfoClient {
 
-	public static void main(String[] args) throws IOException {
-		FileInputStream fis = new FileInputStream("db.properties");
-		
-		Properties prop = new Properties();
-		prop.load(fis);
-		String dbType= prop.getProperty("DBTYPE");
+    public static void main(String[] args) throws IOException {
+        FileInputStream fis = new FileInputStream("db.properties");
 
-		UserInfo userInfo = new UserInfo();
-		userInfo.setUserId("user id");
-		
-		UserInfoDao userInfoDao = null;
-		
-		if(dbType.equals("MYSQL")) {
-			userInfoDao = new UserInfoMySqlDao();
-		} else if(dbType.equals("ORACLE")) {
-			userInfoDao = new UserInfoOracleDao();
-		} else {
-			userInfoDao = new UserInfoMsSqlDao();
-		}
-		
-		userInfoDao.insertUserInfo(userInfo);
-		userInfoDao.updateUserInfo(userInfo);
-		userInfoDao.deleteUserInfo(userInfo);
-		
-	}
+        Properties prop = new Properties();
+        prop.load(fis);
+        String dbType = prop.getProperty("DBTYPE");
+
+        UserInfo userInfo = new UserInfo();
+        userInfo.setUserId("user id");
+
+        UserInfoDao userInfoDao = null;
+
+        if (dbType.equals("MYSQL")) {
+            userInfoDao = new UserInfoMySqlDao();
+        } else if (dbType.equals("ORACLE")) {
+            userInfoDao = new UserInfoOracleDao();
+        } else {
+            userInfoDao = new UserInfoMsSqlDao();
+        }
+
+        userInfoDao.insertUserInfo(userInfo);
+        userInfoDao.updateUserInfo(userInfo);
+        userInfoDao.deleteUserInfo(userInfo);
+
+    }
 
 }

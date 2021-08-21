@@ -1,49 +1,49 @@
 package ch01;
 
 public class Customer {
-	protected int customerId;
-	protected String customerName;
-	protected String customerGrade;
-	int bonusPoint;
-	double bonusRatio;
-	
-	public Customer() {
-		this.customerGrade = "normal";
-		this.bonusRatio = 0.01;
-	}
-	
-	public int calPrice(int price) {
-		bonusPoint += price * bonusRatio;
-		
-		return price;
-	}
-	
-	public String showCustomerInfo() {
-		return customerName + "님의 등급은 " + customerGrade + 
-				"이며, 보너스 포인트는 " + bonusPoint + "원 입니다.";
-	}
+    protected int customerId;
+    protected String customerName;
+    protected String customerGrade;
+    int bonusPoint;
+    double bonusRatio;
 
-	public int getCustomerId() {
-		return customerId;
-	}
+    public Customer() {
+        this.customerGrade = "normal";
+        this.bonusRatio = 0.01;
+    }
 
-	public void setCustomerId(int customerId) {
-		this.customerId = customerId;
-	}
+    public int calPrice(int price) {
+        bonusPoint += price * bonusRatio;
 
-	public String getCustomerName() {
-		return customerName;
-	}
+        return price;
+    }
 
-	public void setCustomerName(String customerName) {
-		this.customerName = customerName;
-	}
+    public String showCustomerInfo() {
+        return customerName + "님의 등급은 " + customerGrade +
+                "이며, 보너스 포인트는 " + bonusPoint + "원 입니다.";
+    }
 
-	public String getCustomerGrade() {
-		return customerGrade;
-	}
+    public int getCustomerId() {
+        return customerId;
+    }
 
-	public void setCustomerGrade(String customerGrade) {
-		this.customerGrade = customerGrade;
-	}
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public String getCustomerGrade() {
+        return customerGrade;
+    }
+
+    public void setCustomerGrade(String customerGrade) {
+        this.customerGrade = customerGrade;
+    }
 }

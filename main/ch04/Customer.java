@@ -1,59 +1,59 @@
 package ch04;
 
 public class Customer {
-	protected int customerId;
-	protected String customerName;
-	protected String customerGrade;
-	int bonusPoint;
-	double bonusRatio;
-	
+    protected int customerId;
+    protected String customerName;
+    protected String customerGrade;
+    int bonusPoint;
+    double bonusRatio;
+
 //	public Customer() {
 //		this.customerGrade = "normal";
 //		bonusRatio = 0.01;
 //		
 //		System.out.println("Customer() call");
 //	}
-	
-	public Customer(int customerId, String customerName) {
-		this.customerId = customerId;
-		this.customerName = customerName;
-		
-		customerGrade = "normal";
-		bonusRatio = 0.01;
-	}
-	
-	public int calPrice(int price) {
-		bonusPoint += price * bonusRatio;
-		
-		return price;
-	}
-	
-	public String showCustomerInfo() {
-		return customerName + "님의 등급은 " + customerGrade + 
-				"이며, 보너스 포인트는 " + bonusPoint + "원 입니다.";
-	}
 
-	public int getCustomerId() {
-		return customerId;
-	}
+    public Customer(int customerId, String customerName) {
+        this.customerId = customerId;
+        this.customerName = customerName;
 
-	public void setCustomerId(int customerId) {
-		this.customerId = customerId;
-	}
+        customerGrade = "normal";
+        bonusRatio = 0.01;
+    }
 
-	public String getCustomerName() {
-		return customerName;
-	}
+    public int calPrice(int price) {
+        bonusPoint += price * bonusRatio;
 
-	public void setCustomerName(String customerName) {
-		this.customerName = customerName;
-	}
+        return price;
+    }
 
-	public String getCustomerGrade() {
-		return customerGrade;
-	}
+    public String showCustomerInfo() {
+        return customerName + "님의 등급은 " + customerGrade +
+                "이며, 보너스 포인트는 " + bonusPoint + "원 입니다.";
+    }
 
-	public void setCustomerGrade(String customerGrade) {
-		this.customerGrade = customerGrade;
-	}
+    public int getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public String getCustomerGrade() {
+        return customerGrade;
+    }
+
+    public void setCustomerGrade(String customerGrade) {
+        this.customerGrade = customerGrade;
+    }
 }
