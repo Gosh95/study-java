@@ -1,5 +1,5 @@
 package ch06;
 
 public abstract class Material {
-	public abstract void print();
+    public abstract void print();
 }
