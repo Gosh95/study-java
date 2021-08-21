@@ -1,45 +1,46 @@
 package ch06;
 
 public class Employee {
-	private String name;
-	private int career;
-	private int annualSalary;
-	
-	public Employee() {}
-	
-	public Employee(String name, int career, int annualSalary) {
-		this.name = name;
-		this.career = career;
-		this.annualSalary = annualSalary;
-	}
+    private String name;
+    private int career;
+    private int annualSalary;
 
-	public String getName() {
-		return name;
-	}
+    public Employee() {
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public Employee(String name, int career, int annualSalary) {
+        this.name = name;
+        this.career = career;
+        this.annualSalary = annualSalary;
+    }
 
-	public int getCareer() {
-		return career;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setCareer(int career) {
-		this.career = career;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public int getAnnualSalary() {
-		return annualSalary;
-	}
+    public int getCareer() {
+        return career;
+    }
 
-	public void setAnnualSalary(int annualSalary) {
-		this.annualSalary = annualSalary;
-	}
+    public void setCareer(int career) {
+        this.career = career;
+    }
 
-	@Override
-	public String toString() {
-		return "이름 : " + this.name + " 경력 : " + this.career + "년 연봉 : " + this.annualSalary + "만원";
-	}
-	
+    public int getAnnualSalary() {
+        return annualSalary;
+    }
+
+    public void setAnnualSalary(int annualSalary) {
+        this.annualSalary = annualSalary;
+    }
+
+    @Override
+    public String toString() {
+        return "이름 : " + this.name + " 경력 : " + this.career + "년 연봉 : " + this.annualSalary + "만원";
+    }
+
 }

@@ -43,64 +43,66 @@ class Person implements Externalizable {
 */
 
 class Person implements Serializable {
-	//직렬화는 인스턴스의 내용이 외부로 유출되는 것이므로 프로그래머가 해당 객체에 대한 직렬화 의도를 표시해야 함
-	
-	private static final long serialVersionUID = 1L;
-	
-	String name;
-	String city;
-	//transient String name;
-	//transient : 직렬화 하지 않거나 할 수 없는 멤버 변수에 사용함
-	public Person() {}
-	
-	public Person(String name, String city) {
-		this.name = name;
-		this.city = city;
-	}
+    //직렬화는 인스턴스의 내용이 외부로 유출되는 것이므로 프로그래머가 해당 객체에 대한 직렬화 의도를 표시해야 함
 
-	@Override
-	public String toString() {
-		return "Person [name=" + name + ", city=" + city + "]";
-	}
+    private static final long serialVersionUID = 1L;
+
+    String name;
+    String city;
+
+    //transient String name;
+    //transient : 직렬화 하지 않거나 할 수 없는 멤버 변수에 사용함
+    public Person() {
+    }
+
+    public Person(String name, String city) {
+        this.name = name;
+        this.city = city;
+    }
+
+    @Override
+    public String toString() {
+        return "Person [name=" + name + ", city=" + city + "]";
+    }
 }
 
 public class SerializationTest {
 
-	public static void main(String[] args) {
-		Person ahn = new Person("Ahn", "Seoul");
-		Person lee = new Person("Lee", "Jeju");
-		
-		try (FileOutputStream fos = new FileOutputStream("serial.txt");
-				ObjectOutputStream oos = new ObjectOutputStream(fos)) {
-			oos.writeObject(ahn);
-			oos.writeObject(lee);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		try (FileInputStream fis = new FileInputStream("serial.txt");
-				ObjectInputStream ois = new ObjectInputStream(fis)) {
-			Person p1 = (Person) ois.readObject();
-			Person p2 = (Person) ois.readObject();
-			
-			System.out.println(p1);
-			System.out.println(p2);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		System.out.println("complete");
-	}
+    public static void main(String[] args) {
+        Person ahn = new Person("Ahn", "Seoul");
+        Person lee = new Person("Lee", "Jeju");
+
+        try (FileOutputStream fos = new FileOutputStream("serial.txt");
+             ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+            oos.writeObject(ahn);
+            oos.writeObject(lee);
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        try (FileInputStream fis = new FileInputStream("serial.txt");
+             ObjectInputStream ois = new ObjectInputStream(fis)) {
+            Person p1 = (Person) ois.readObject();
+            Person p2 = (Person) ois.readObject();
+
+            System.out.println(p1);
+            System.out.println(p2);
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        System.out.println("complete");
+    }
 
 }
