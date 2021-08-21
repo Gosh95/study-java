@@ -5,15 +5,15 @@ public class ParityBitTest {
         int[] parity = {0, 1, 0, 0, 1, 0, 0, 0, 1};
         int count = 0;
 
-        for(int i = 1; i < 9; i++) {
-            if(parity[i] == 1) {
+        for (int i = 1; i < 9; i++) {
+            if (parity[i] == 1) {
                 count++;
             }
         }
 
         int check = count % 2; //0인지 1인지 검사 숫자변수
 
-        if(check == parity[0]) {
+        if (check == parity[0]) {
             System.out.println("에러없음");
         } else {
             System.out.println("에러발견"); //에러발견

@@ -6,14 +6,14 @@ public class MaximumAndMinimumTest {
         int position = 0;
         int min = 0;
 
-        while(true) {
-            if(english[position] == 100) {//영어가 100점인 학생
-                if(math[position] > min) {//수학점수가 큰 학생
+        while (true) {
+            if (english[position] == 100) {//영어가 100점인 학생
+                if (math[position] > min) {//수학점수가 큰 학생
                     min = math[position];//수학점수
                 }
             }
             position++;
-            if(position >= english.length) break;//배열 다 돌면 종료
+            if (position >= english.length) break;//배열 다 돌면 종료
         }
 
         System.out.println(min);//80

@@ -9,11 +9,11 @@ public class SumAndAverageTest {
         int sum = 0;
         double average = 0;
 
-        while(true) {
+        while (true) {
             sum += time[count];
             count++;
 
-            if(count >= time.length) break;
+            if (count >= time.length) break;
         }
         average = sum / count;
         System.out.println(average);//약 197.0초

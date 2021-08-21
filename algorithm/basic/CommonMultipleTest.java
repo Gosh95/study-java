@@ -9,13 +9,13 @@ public class CommonMultipleTest {
             int three = arr[position] % 3;//3으로 나눈 나머지
             int four = arr[position] % 4;//4로 나눈 나머지
 
-            if(three + four == 0) {//나머지가 0이다 == 3의배수 이면서 4의 배수이다.
+            if (three + four == 0) {//나머지가 0이다 == 3의배수 이면서 4의 배수이다.
                 count++; //카운트 증가
             }
 
             position++;
 
-        } while(position < arr.length);
+        } while (position < arr.length);
 
         System.out.println(count); //3
     }

@@ -12,19 +12,19 @@ public class ApproximationTest {
         int minCha = 0;
 
         do {
-            if(arr[position] >= input) {
+            if (arr[position] >= input) {
                 minCha = arr[position] - input;
             } else {
                 minCha = input - arr[position];
             }
 
-            if(maxCha > minCha) {
+            if (maxCha > minCha) {
                 maxCha = minCha;
                 temp = position;
             }
 
             position++;
-        } while(position < arr.length);
+        } while (position < arr.length);
 
         System.out.println("근사값 : " + arr[temp] + ", " + (temp + 1) + "번째");
         //140
