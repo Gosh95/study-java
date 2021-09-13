@@ -1,3 +1,3 @@
 # java-study
 
-study java for back-end
+Study Java Object-Oriented-Programming
